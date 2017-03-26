@@ -72,7 +72,7 @@ I started first with LeNet and I tried to play around with the hyperparameters a
 
 * **Reduce Learning Rate**. Reduce learning rate when a metric has stopped improving.
 
-* **Early Stopping**. Stop model from continuing learning process if there is no improvement in the validation accuracy.
+* **Early Stopping**. Stop model from continues with the learning process if there is no improvement in the validation accuracy.
 
 ## Future Improvments
 
