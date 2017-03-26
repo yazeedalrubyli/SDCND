@@ -11,7 +11,7 @@ The Dataset consists of training, validation and testing datasets. Training data
 
 ## Preprocessing
 
-Grayscale, then apply **Contrast Limited Adaptive Histogram Equalization** (a.k.a CLAHE) on dataset seems to provide better accuracy. Finaly, we scale pixle value from `[0-255]` to `[0-1]`.
+Grayscale, then apply **Contrast Limited Adaptive Histogram Equalization** (a.k.a CLAHE) on dataset seems to provide better accuracy. Finally, we scale pixel value from `[0-255]` to `[0-1]`.
 
 ## Augmentation
 
@@ -30,7 +30,7 @@ When we augment all the images at once, the accuracy did not improve that much. 
 
 ### Architecture
 
-I started first with LeNet and I tried to play around with the hyperparamters and I got around 89% as validation accurecy. Then, after reading some papers about avalible CNN I tried to impolement [SqueezeNet](https://arxiv.org/pdf/1602.07360.pdf) which they claim to be as accuret as AlexNet but 50X faster. I got validation accurecy about 90%, so I decided to build my own CNN. I build my CNN with 3 Convloutional layers and 3 Fully Connected layers, I got validation accurecy about **98% without even agument or preprocess my datasets**, I called my network, YazNet ;)
+I started first with LeNet and I tried to play around with the hyperparameters and I got around 89% as validation accuracy. Then, after reading some papers about available CNN I tried to implement [SqueezeNet](https://arxiv.org/pdf/1602.07360.pdf) which they claim to be as accurate as AlexNet but 50X faster. I got validation accuracy about 90%, so I decided to build my own CNN. I build my CNN with 3 Convolutional layers and 3 Fully Connected layers, I got validation accuracy about **98% without even image augmentation or preprocessing my datasets**, I called my network, YazNet ;)
 
 ```
     Convolution (128, 5x5)
@@ -68,20 +68,20 @@ I started first with LeNet and I tried to play around with the hyperparamters an
 
 ### Regularization
 
-* **Dropout**. Prevent the model from overfiting.
+* **Dropout**. Prevent the model from overfitting.
 
-* **Early Stopping**. Stop model from countinue learning process if there is not improvments to the validation accurecy.
+* **Early Stopping**. Stop model from continuing learning process if there is no improvement in the validation accuracy.
 
 ## Future Improvments
 
 ### Classifier Improvments
 
-* **Agument Classes with Lower Data**.
+* **Argument Classes with Lower Data**.
 
 
 ### Dataset
 
-* **Add New Data**. For testing how good is my model, as 5 new images is not enough to decide.
+* **Add New Data**. For testing how good is my model, as 5 new images are not enough to decide.
 
 
 ### Documentation Improvments
@@ -93,4 +93,3 @@ I started first with LeNet and I tried to play around with the hyperparamters an
 * **Training Discussion**.
 
 * **Result Discussion**.
-
