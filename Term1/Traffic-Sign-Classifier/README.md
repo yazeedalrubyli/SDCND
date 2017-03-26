@@ -63,7 +63,7 @@ I started first with LeNet and I tried to play around with the hyperparameters a
     Dropout
     
     FC 43
-    Activation('sigmoid')
+    Activation: Sigmoid
 ```
 
 ### Regularization
