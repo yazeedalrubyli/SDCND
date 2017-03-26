@@ -19,7 +19,7 @@ When we augment all the images at once, the accuracy did not improve that much. 
 
 * **Flipping**
 
-* **Rotation**
+* **Rotating**
 
 * **Shifting**
 
