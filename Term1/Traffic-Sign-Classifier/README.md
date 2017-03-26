@@ -74,9 +74,9 @@ I started first with LeNet and I tried to play around with the hyperparameters a
 
 * **Early Stopping**. Stop model from continues with the learning process if there is no improvement in the validation accuracy.
 
-## Future Improvments
+## Future Improvements
 
-### Classifier Improvments
+### Classifier
 
 * **Augmenting Classes with Lower Data**
 
@@ -86,7 +86,7 @@ I started first with LeNet and I tried to play around with the hyperparameters a
 * **Add New Data**. For testing how good is my model, as 5 new images are not enough to decide.
 
 
-### Documentation Improvments
+### Documentation
 
 * **Define some terms in details**
 
