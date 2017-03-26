@@ -17,13 +17,13 @@ Grayscale, then apply **Contrast Limited Adaptive Histogram Equalization** (a.k.
 
 When we augment all the images at once, the accuracy did not improve that much. I think the problem is that we should augment only the classes that we do not have much data about it.
 
-* **Flipping**.
+* **Flipping**
 
-* **Rotation**.
+* **Rotation**
 
-* **Shifting**.
+* **Shifting**
 
-* **Zooming**.
+* **Zooming**
 
 
 ## Model 
