@@ -11,7 +11,7 @@ The Dataset consists of training, validation and testing datasets. Training data
 
 ## Preprocessing
 
-Grayscale, then apply **Contrast Limited Adaptive Histogram Equalization** (a.k.a CLAHE) on dataset seems to provide better accuracy. Finally, we scale pixel value from `[0-255]` to `[0-1]`.
+**Grayscale**, then apply **Contrast Limited Adaptive Histogram Equalization** (a.k.a CLAHE) on dataset seems to provide better accuracy. Finally, we scale pixel value from `[0-255]` to `[0-1]`.
 
 ## Augmentation
 
