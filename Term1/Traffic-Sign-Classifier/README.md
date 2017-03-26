@@ -78,7 +78,7 @@ I started first with LeNet and I tried to play around with the hyperparameters a
 
 ### Classifier Improvments
 
-* **Argument Classes with Lower Data**
+* **Augmenting Classes with Lower Data**
 
 
 ### Dataset
