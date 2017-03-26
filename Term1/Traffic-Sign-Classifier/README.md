@@ -39,7 +39,7 @@ I started first with LeNet and I tried to play around with the hyperparameters a
     Batch Normalization
     
     Convolution (256, 5x5)
-    Activation: Rrelu
+    Activation: Relu
     Max Pooling (2x2)
     Batch Normalization
     
@@ -68,7 +68,9 @@ I started first with LeNet and I tried to play around with the hyperparameters a
 
 ### Regularization
 
-* **Dropout**. Prevent the model from overfitting.
+* **Dropout**. Prevent the model from overfitting
+
+* **Reduce Learning Rate**. Reduce learning rate when a metric has stopped improving.
 
 * **Early Stopping**. Stop model from continuing learning process if there is no improvement in the validation accuracy.
 
@@ -76,7 +78,7 @@ I started first with LeNet and I tried to play around with the hyperparameters a
 
 ### Classifier Improvments
 
-* **Argument Classes with Lower Data**.
+* **Argument Classes with Lower Data**
 
 
 ### Dataset
@@ -86,10 +88,10 @@ I started first with LeNet and I tried to play around with the hyperparameters a
 
 ### Documentation Improvments
 
-* **Define some terms in details**.
+* **Define some terms in details**
 
-* **Add Model Architecture as Figuer**.
+* **Add Model Architecture as Figuer**
 
-* **Training Discussion**.
+* **Training Discussion**
 
-* **Result Discussion**.
+* **Result Discussion**
