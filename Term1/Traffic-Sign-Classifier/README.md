@@ -29,8 +29,6 @@ Here are some preprocessing techniques that have proven to work on this dataset:
 
 When we augment all the images at once, the accuracy did not improve that much. I think we should augment only the classes that we do not have much data about it. These are augmentation techniques used: 
 
-* **Flipping**
-
 * **Rotating**
 
 * **Shifting**
