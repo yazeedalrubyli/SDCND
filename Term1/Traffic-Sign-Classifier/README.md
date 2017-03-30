@@ -1,6 +1,6 @@
 
 
-# Build a Traffic Sign Recognition Program
+# Traffic Sign Recognition Program
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 Our main goal in this project is to classify [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) by using Convolutional Neural Network (CNN). This project is a part of Udacity's Self-Driving Car Nanodegree Projects in Term 1.
@@ -28,6 +28,8 @@ Here are some preprocessing techniques that have proven to work on this dataset:
 ## Augmentation
 
 When we augment all the images at once, the accuracy did not improve that much. I think we should augment only the classes that we do not have much data about it. These are augmentation techniques used: 
+
+* **Flipping**
 
 * **Rotating**
 
@@ -90,20 +92,25 @@ I started first with LeNet and I tried to play around with the hyperparameters a
 * **Early Stopping**. Stop model from continues with the learning process if there is no improvement in the validation accuracy.
 
 ## Training
-%%%%%%% 
-Using StratifiedShuffleSplit over the traditional train-test-split, enables the use of the entire training data while keeping data for cross-validation: the distribution of the labels in both would be similar. Around 1% of the data can be used for the cross-validation set.
+
 How would I choose the optimizer? What is its Pros & Cons and how would I evaluate it?
+
 How would I decide the number and type of layers?
+
 How would I tune the hyperparameter? How many values should I test and how to decide the values?
+
 How would I preprocess my data? Why do I need to apply a certain technique?
+
 How would I train the model?
+
 How would I evaluate the model? What is the metric? How do I set the benchmark?
-%%%%%%% 
+
 
 ## Result
-%%%%%%% 
-@you also are required to discuss before doing the actual prediction, what qualities your new images have (e.g: brightness, contrast, etc. ) that might cause your model to misclassify them.
-@You should clearly discuss how certain or uncertain your model is of its prediction.
+
+Discuss before doing the actual prediction, what qualities your new images have (e.g: brightness, contrast, etc. ) that might cause your model to misclassify them.
+
+Clearly discuss how certain or uncertain your model is of its prediction.
 
 @ > In Code
 
