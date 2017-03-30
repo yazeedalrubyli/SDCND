@@ -46,7 +46,7 @@ When we augment all the images at once, the accuracy did not improve that much. 
 I started first with LeNet and I tried to play around with the hyperparameters and I got around 89% as validation accuracy. Then, after reading some papers about available CNN I tried to implement [SqueezeNet](https://arxiv.org/pdf/1602.07360.pdf) which they claim to be as accurate as AlexNet but 50X faster. I got validation accuracy about 90%, so I decided to build my own CNN. I build my CNN with 3 Convolutional layers and 3 Fully Connected layers, I got validation accuracy about **99% without even preprocess or augmenting my dataset**, I called my network, **YazNet** ;)
 
 <p align="center">
-  <img src="YazNet_Arch.png" alt="Model architecture"/>
+  <img src="YazNet_Arch.png" alt="Architecture"/>
 </p>
 
 ```
@@ -97,9 +97,10 @@ I used Adam, Adagrad, Adadelta, SGD and RMSprop as optimizers. Adadelta has prov
 
 I tried to inject layers and remove some and mix them till I got **YazNet** which provide the highest accuracy on plain augmented images. From choosing the filter size for each layer till reaching batch size for training the model, tuning hyperparameter plays a great role in increasing the accuracy of my model. To get a clue of how well my model is performing we used about 30 new images and let the model predict them. We got 91% as accuracy compared to 98% on the test set.
 
-How would I preprocess my data? Why do I need to apply a certain technique?
 
-
+<p align="center">
+  <img src="Model_Training_Stat.png" alt="Training Statistics"/>
+</p>
 
 
 ## Result
