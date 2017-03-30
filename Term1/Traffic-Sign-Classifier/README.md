@@ -7,15 +7,29 @@ Our main goal in this project is to classify [German Traffic Sign Dataset](http:
 
 ## Dataset
 
-The Dataset consists of training, validation and testing datasets. Training dataset consists of 34,799 32x32 color images, validation dataset consists of 4,410 32x32 color images and testing dataset consists of 12,630 32x32 color images.
+```
+    Type         Amount    Size     Color
+    
+    Training     34,799    32x32    RGB
+
+    Validation   12,630    32x32    RGB
+
+    Testing      4,410     32x32    RGB
+```
 
 ## Preprocessing
 
-**Grayscale**, then apply **Contrast Limited Adaptive Histogram Equalization** (a.k.a CLAHE) on dataset seems to provide better accuracy. Finally, we scale pixel value from `[0-255]` to `[0-1]`.
+Here are some preprocessing techniques that have proven to work on this dataset:
+
+#(* **Contrast Limited Adaptive Histogram Equalization (CLAHE)**. Some images have some shadows and darkness, so I decide to find a way to remove darkness. After searching I found great resource of how to deal with such a problm, and the solution is to apply [Histogram Equalization](http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html) which is provided by OpenCV. [Histogram Equalization is a method in image processing of contrast adjustment using the image's histogram](https://en.wikipedia.org/wiki/Histogram_equalization). Using Histogram Equalization could let you lose information about image with over-brightness. To sovle this issue we divid image into blocks called "titles" (tileSize is 8x8 by default in OpenCV), then each of these blocks are histogram equalized as usual and this process called Contrast Limited Adaptive Histogram Equalization (CLAHE).)
+
+* **Pixcel Normalization**. We normlized the image to a range `[0,1]` instade of `[0-255]`.
+
+* **Pixcel Mean Centering**. We subtract 0.5 from each pixcel after applying the pixcel normalization.
 
 ## Augmentation
 
-When we augment all the images at once, the accuracy did not improve that much. I think the problem is that we should augment only the classes that we do not have much data about it.
+When we augment all the images at once, the accuracy did not improve that much. I think we should augment only the classes that we do not have much data about it.
 
 * **Flipping**
 
@@ -25,12 +39,17 @@ When we augment all the images at once, the accuracy did not improve that much. 
 
 * **Zooming**
 
+> **Note**: Augmentation is there in code as a function. It needs some modification as we mentioned above.
 
 ## Model 
 
 ### Architecture
 
-I started first with LeNet and I tried to play around with the hyperparameters and I got around 89% as validation accuracy. Then, after reading some papers about available CNN I tried to implement [SqueezeNet](https://arxiv.org/pdf/1602.07360.pdf) which they claim to be as accurate as AlexNet but 50X faster. I got validation accuracy about 90%, so I decided to build my own CNN. I build my CNN with 3 Convolutional layers and 3 Fully Connected layers, I got validation accuracy about **99% without even preprocessing or augmenting my dataset**, I called my network, YazNet ;)
+I started first with LeNet and I tried to play around with the hyperparameters and I got around 89% as validation accuracy. Then, after reading some papers about available CNN I tried to implement [SqueezeNet](https://arxiv.org/pdf/1602.07360.pdf) which they claim to be as accurate as AlexNet but 50X faster. I got validation accuracy about 90%, so I decided to build my own CNN. I build my CNN with 3 Convolutional layers and 3 Fully Connected layers, I got validation accuracy about **99% without even preprocess or augmenting my dataset**, I called my network, YazNet ;)
+
+<p align="center">
+  <img src="YazNet_Arch.png" alt="Model architecture"/>
+</p>
 
 ```
     Convolution (128, 5x5)
@@ -74,24 +93,28 @@ I started first with LeNet and I tried to play around with the hyperparameters a
 
 * **Early Stopping**. Stop model from continues with the learning process if there is no improvement in the validation accuracy.
 
+## Training
+%%%%%%% 
+Using StratifiedShuffleSplit over the traditional train-test-split, enables the use of the entire training data while keeping data for cross-validation: the distribution of the labels in both would be similar. Around 1% of the data can be used for the cross-validation set.
+How would I choose the optimizer? What is its Pros & Cons and how would I evaluate it?
+How would I decide the number and type of layers?
+How would I tune the hyperparameter? How many values should I test and how to decide the values?
+How would I preprocess my data? Why do I need to apply a certain technique?
+How would I train the model?
+How would I evaluate the model? What is the metric? How do I set the benchmark?
+%%%%%%% 
+
+## Result
+%%%%%%% 
+@you also are required to discuss before doing the actual prediction, what qualities your new images have (e.g: brightness, contrast, etc. ) that might cause your model to misclassify them.
+@You should clearly discuss how certain or uncertain your model is of its prediction.
+
+@ > In Code
+
+Forgot to compare the accuracy on the new set of images to that on the old test set.
+Your explanation can look something like: the accuracy on the captured images is X% while it was Y% on the testing set thus It seems the model is overfitting
+
+
 ## Future Improvements
 
-### Classifier
-
-* **Augmenting Classes with Lower Data**
-
-
-### Dataset
-
-* **Add New Data**. For testing how good is my model, as 5 new images are not enough to decide.
-
-
-### Documentation
-
-* **Define some terms in details**
-
-* **Add Model Architecture as Figuer**
-
-* **Training Discussion**
-
-* **Result Discussion**
+* **Augmenting Classes with Less Data**
