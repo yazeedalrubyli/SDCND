@@ -112,9 +112,8 @@ Discuss before doing the actual prediction, what qualities your new images have 
 
 Clearly discuss how certain or uncertain your model is of its prediction.
 
-@ > In Code
+Compare the accuracy on the new set of images to that on the old test set.
 
-Forgot to compare the accuracy on the new set of images to that on the old test set.
 Your explanation can look something like: the accuracy on the captured images is X% while it was Y% on the testing set thus It seems the model is overfitting
 
 
