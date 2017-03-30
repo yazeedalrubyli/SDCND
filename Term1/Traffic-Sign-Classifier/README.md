@@ -3,7 +3,7 @@
 # Build a Traffic Sign Recognition Program
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-Our main goal in this project is to classify [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) by using Convolutional Neural Network (a.k.a CNN). This project is a part of Udacity's Self-Driving Car Nanodegree Projects in Term 1.
+Our main goal in this project is to classify [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) by using Convolutional Neural Network (CNN). This project is a part of Udacity's Self-Driving Car Nanodegree Projects in Term 1.
 
 ## Dataset
 
@@ -27,7 +27,7 @@ Here are some preprocessing techniques that have proven to work on this dataset:
 
 ## Augmentation
 
-When we augment all the images at once, the accuracy did not improve that much. I think we should augment only the classes that we do not have much data about it.
+When we augment all the images at once, the accuracy did not improve that much. I think we should augment only the classes that we do not have much data about it. These are augmentation techniques used: 
 
 * **Flipping**
 
@@ -43,7 +43,7 @@ When we augment all the images at once, the accuracy did not improve that much. 
 
 ### Architecture
 
-I started first with LeNet and I tried to play around with the hyperparameters and I got around 89% as validation accuracy. Then, after reading some papers about available CNN I tried to implement [SqueezeNet](https://arxiv.org/pdf/1602.07360.pdf) which they claim to be as accurate as AlexNet but 50X faster. I got validation accuracy about 90%, so I decided to build my own CNN. I build my CNN with 3 Convolutional layers and 3 Fully Connected layers, I got validation accuracy about **99% without even preprocess or augmenting my dataset**, I called my network, YazNet ;)
+I started first with LeNet and I tried to play around with the hyperparameters and I got around 89% as validation accuracy. Then, after reading some papers about available CNN I tried to implement [SqueezeNet](https://arxiv.org/pdf/1602.07360.pdf) which they claim to be as accurate as AlexNet but 50X faster. I got validation accuracy about 90%, so I decided to build my own CNN. I build my CNN with 3 Convolutional layers and 3 Fully Connected layers, I got validation accuracy about **99% without even preprocess or augmenting my dataset**, I called my network, **YazNet** ;)
 
 <p align="center">
   <img src="YazNet_Arch.png" alt="Model architecture"/>
@@ -115,4 +115,4 @@ Your explanation can look something like: the accuracy on the captured images is
 
 ## Future Improvements
 
-* **Augmenting Classes with Less Data**
+* **Augmentation for Classes with Less Data**
