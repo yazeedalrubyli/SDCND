@@ -8,20 +8,18 @@ Our main goal in this project is to classify [German Traffic Sign Dataset](http:
 ## Dataset
 
 ```
-    Type         Amount    Size     Color
+    Type         Amount     Size     Color
     
-    Training     34,799    32x32    RGB
+    Training     34,799    32x32      RGB
 
-    Validation   12,630    32x32    RGB
+    Validation   12,630    32x32      RGB
 
-    Testing      4,410     32x32    RGB
+    Testing      4,410     32x32      RGB
 ```
 
 ## Preprocessing
 
 Here are some preprocessing techniques that have proven to work on this dataset:
-
-#(* **Contrast Limited Adaptive Histogram Equalization (CLAHE)**. Some images have some shadows and darkness, so I decide to find a way to remove darkness. After searching I found great resource of how to deal with such a problm, and the solution is to apply [Histogram Equalization](http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html) which is provided by OpenCV. [Histogram Equalization is a method in image processing of contrast adjustment using the image's histogram](https://en.wikipedia.org/wiki/Histogram_equalization). Using Histogram Equalization could let you lose information about image with over-brightness. To sovle this issue we divid image into blocks called "titles" (tileSize is 8x8 by default in OpenCV), then each of these blocks are histogram equalized as usual and this process called Contrast Limited Adaptive Histogram Equalization (CLAHE).)
 
 * **Pixcel Normalization**. We normlized the image to a range `[0,1]` instade of `[0-255]`.
 
@@ -87,7 +85,7 @@ I started first with LeNet and I tried to play around with the hyperparameters a
 
 ### Regularization
 
-* **Dropout**. Prevent the model from overfitting
+* **Dropout**. Prevent the model from overfitting.
 
 * **Reduce Learning Rate**. Reduce learning rate when a metric has stopped improving.
 
