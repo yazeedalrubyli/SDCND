@@ -20,5 +20,6 @@
 
 <p align="center">
   <img src="Media/BehavioralCloning.gif" alt="Driving Autonomously"/>
+  <a href="https://youtu.be/08jBeBCmbLE">Fully Autonomous Driving Video</a>
 </p>
-<a align="center" href="https://youtu.be/08jBeBCmbLE">Fully Autonomous Driving Video</a>
+
