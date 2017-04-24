@@ -22,6 +22,5 @@
   <img src="Media/BehavioralCloning.gif" alt="Driving Autonomously"/>
 </p>
 
-<p align="center">
-[Fully Autonomous Driving Video](https://youtu.be/08jBeBCmbLE)
-</p>
+<a href="https://youtu.be/08jBeBCmbLE">sdfsdfsdf</a>
+<center>[Fully Autonomous Driving Video](https://youtu.be/08jBeBCmbLE)</center>
