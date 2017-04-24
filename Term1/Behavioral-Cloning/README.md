@@ -15,11 +15,13 @@
 
 ## Model Architecture
 
-[sdfsdfsdf](https://arxiv.org/abs/1604.07316)
+[NVIDIA End to End Self-Driving Architecture](https://arxiv.org/abs/1604.07316)
 
 
 <p align="center">
   <img src="Media/BehavioralCloning.gif" alt="Driving Autonomously"/>
 </p>
 
-<center>[Fully Autonomous Driving Video](https://youtu.be/08jBeBCmbLE)</center>
+<p align="center">
+[Fully Autonomous Driving Video](https://youtu.be/08jBeBCmbLE)
+</p>
