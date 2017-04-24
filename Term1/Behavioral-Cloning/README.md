@@ -21,7 +21,4 @@
 <p align="center">
   <img src="Media/BehavioralCloning.gif" alt="Driving Autonomously"/>
 </p>
-<a href="https://www.youtube.com/watch?v=08jBeBCmbLE" align="center">
-  <img src="Media/BehavioralCloning.mp4" alt="Driving Autonomously Video"/>
-</a>
-
+[![Driving Autonomously Video](http://img.youtube.com/vi/08jBeBCmbLE/0.jpg)](http://www.youtube.com/watch?v=08jBeBCmbLE "Behavioral Cloning")
