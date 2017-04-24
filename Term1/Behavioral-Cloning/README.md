@@ -12,15 +12,14 @@
 
 ## Training Strategy
 
-
 ## Model Architecture
+[NVIDIA End to End Learning for Self-Driving Cars Paper](https://arxiv.org/abs/1604.07316)
 
-[](https://arxiv.org/abs/1604.07316)
-
+## Results
 
 <p align="center">
   <img src="Media/BehavioralCloning.gif" alt="Driving Autonomously"/>
+  <br/>
+  <a target="_blank" href="https://youtu.be/08jBeBCmbLE">Fully Autonomous Driving Video</a>
 </p>
-<p align="center">
-[Fully Autonomous Driving Video](https://youtu.be/08jBeBCmbLE)
-</p>
+

@@ -7,15 +7,11 @@ Our main goal in this project is to classify [German Traffic Sign Dataset](http:
 
 ## Dataset
 
-```
-    Type         Amount     Size     Color
-    
-    Training     34,799    32x32      RGB
-
-    Validation   4,410     32x32      RGB
-
-    Testing      12,630    32x32      RGB
-```
+|    Type    | Amount |  Size | Color |
+|------------|--------|-------|-------|
+| Training   | 34,799 | 32x32 |  RGB  |
+| Validation | 4,410  | 32x32 |  RGB  |
+| Testing    | 12,630 | 32x32 |  RGB  |
 
 ## Preprocessing
 
