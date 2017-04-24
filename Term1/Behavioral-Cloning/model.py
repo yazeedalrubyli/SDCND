@@ -96,9 +96,9 @@ if __name__ == "__main__":
     size = 2500
     rang = 10
     for i in range(rang):
-        print('='*51)
-        print('='*24,"%d/%d" % (i+1,rang), '='*24)
-        print('='*51)
+        print('='*50)
+        print('='*22,"%d/%d" % (i+1,rang), '='*22)
+        print('='*50)
         for idx in range(rang):
                 X_train, Y_train = genImages(idx*size, size)
                 model.fit(X_train, Y_train, batch_size=600, epochs=1, shuffle=True, validation_split=0.2)
