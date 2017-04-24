@@ -12,10 +12,8 @@
 
 ## Training Strategy
 
-
 ## Model Architecture
-
-[NVIDIA End to End Self-Driving Architecture](https://arxiv.org/abs/1604.07316)
+[NVIDIA End to End Learning for Self-Driving Cars Paper](https://arxiv.org/abs/1604.07316)
 
 ## Results
 
