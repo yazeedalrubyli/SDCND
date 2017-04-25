@@ -54,7 +54,7 @@ measurments = np.concatenate((Center, Left, Right, -Center, -Left, -Right), axis
 ```
 
 ### Overfitting
-I used **Dropout** to prevent the model from overfitting and generalize better to other tracks and driving in reverse track.
+I used **Dropout** to prevent the model from overfitting and generalize better to other tracks and driving in reverse.
 
 ## How Camera and Steering Wheel Work
 Each image taken has its own steering wheel angle which will act as a result of the neural network. This image demonstrates the process.
