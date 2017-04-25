@@ -54,7 +54,7 @@ measurments = np.concatenate((Center, Left, Right, -Center, -Left, -Right), axis
 Each image taken has its own steering wheel angle which will act as a result of the neural network. This image demonstrates the process.
 
 <p align="center">
-  <img src="Media/training.png" alt="Training" width="620" height="320"/>
+  <img src="Media/training.png" alt="Training" width="650" height="320"/>
   <br/>
   End to End Learning for Self-Driving Cars (<a target="_blank" href="https://arxiv.org/abs/1604.07316">Paper</a>)
 </p>
