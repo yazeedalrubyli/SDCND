@@ -36,7 +36,7 @@ measurments = np.concatenate((C, L, R, -C, -L, -R), axis=0)
 ```
 > This operation produce ~150k of images.
 
-### Camera and Steering Wheel
+### How Camera and Steering Wheel Work
 Each image taken has its own steering wheel angle which will act as a result of the neural network. This image demonstrates the process.
 
 <p align="center">
