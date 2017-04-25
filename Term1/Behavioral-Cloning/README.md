@@ -18,7 +18,13 @@ In simulator, there are 3 cameras attached to the car. These are the images take
 |  Right  | ~16K |  160x320  |  RGB  |
 |  **Total** | **~50k** |  **160x320**  |  **RGB**  |
 
+cameraImages.png
+
 > It takes about 30min of driving around the track, to get this amount of data.
+
+<p align="center">
+  <img src="Media/cameraImages.png"/>
+</p>
 
 ## Training Strategy
 
@@ -34,7 +40,6 @@ Right = measurments
 measurments = np.concatenate((Center, Left, Right, -Center, -Left, -Right), axis=0)
 
 ```
-[pic] [pic]
 
 > This operation produce ~150k in total (Original and Filpped).
 
@@ -62,7 +67,6 @@ Each image taken has its own steering wheel angle which will act as a result of 
 ### 
 
 ## Model Architecture
-NVIDIA CNN Architecture
 
 <p align="center">
   <img src="Media/cnn-architecture.png" alt="Model Architecture" width="550" height="800"/>
@@ -78,3 +82,4 @@ NVIDIA CNN Architecture
   <a target="_blank" href="https://youtu.be/08jBeBCmbLE">Fully Autonomous Driving Video</a>
 </p>
 
+## Future Improvements
