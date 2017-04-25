@@ -18,7 +18,7 @@ In simulator, there are 3 cameras attached to the car. These are the images take
 |  Right  | ~16K |  160x320  |  RGB  |
 |  **Total** | **~50k** |  **160x320**  |  **RGB**  |
 
-> To get this amount of data, It takes about 30min of driving around the track.
+> It takes about 30min of driving around the track, to get this amount of data.
 
 ## Training Strategy
 
