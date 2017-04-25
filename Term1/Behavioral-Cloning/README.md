@@ -36,7 +36,7 @@ measurments = np.concatenate((Center, Left, Right, -Center, -Left, -Right), axis
 ```
 [pic] [pic]
 
-> This operation produce ~150k of images.
+> This operation produce ~150k in total (Original and Filpped).
 
 ### Stay Between Lane Lines
 
