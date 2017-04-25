@@ -13,14 +13,7 @@
 ## Training Strategy
 
 ### Dataset
-In simulator, there are 3 cameras attached to the car. 
-
-<p align="center">
-  <img src="Media/training.png" alt="Training"/>
-</p>
-
-
-These are the images taken by each camera:
+In simulator, there are 3 cameras attached to the car. These are the images taken by each camera:
 
 | Postion | Size | Dimension | Color |
 |---------|------|-----------|-------|
@@ -46,6 +39,13 @@ measurments = np.concatenate((C, L, R, -C, -L, -R), axis=0)
 
 ```
 > This operation produce ~150k of images.
+
+### Steering Angle + Camera Image
+Each image taken has its own steering wheel angle which will act as a result of the neural network. This image demonstrates the process.
+
+<p align="center">
+  <img src="Media/training.png" alt="Training"/>
+</p>
 
 ### 
 
