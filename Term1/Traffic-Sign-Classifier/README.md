@@ -1,21 +1,17 @@
 
 
-# Traffic Sign Recognition Program
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+# Traffic Sign Recognition [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+
 
 Our main goal in this project is to classify [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) by using Convolutional Neural Network (CNN). This project is a part of Udacity's Self-Driving Car Nanodegree Projects in Term 1.
 
 ## Dataset
 
-```
-    Type         Amount     Size     Color
-    
-    Training     34,799    32x32      RGB
-
-    Validation   4,410     32x32      RGB
-
-    Testing      12,630    32x32      RGB
-```
+|    Type    | Amount |  Size | Color |
+|------------|--------|-------|-------|
+| Training   | 34,799 | 32x32 |  RGB  |
+| Validation | 4,410  | 32x32 |  RGB  |
+| Testing    | 12,630 | 32x32 |  RGB  |
 
 ## Preprocessing
 
