@@ -53,7 +53,11 @@ measurments = np.concatenate((Center, Left, Right, -Center, -Left, -Right), axis
 
 ```
 
-### How Camera and Steering Wheel Work
+### Regularization
+
+* **Dropout.** Prevent the model from overfitting.
+
+## How Camera and Steering Wheel Work
 Each image taken has its own steering wheel angle which will act as a result of the neural network. This image demonstrates the process.
 
 <p align="center">
@@ -61,8 +65,6 @@ Each image taken has its own steering wheel angle which will act as a result of 
   <br/><br/>
   End to End Learning for Self-Driving Cars (<a target="_blank" href="https://arxiv.org/abs/1604.07316">Paper</a>)
 </p>
-
-### 
 
 ## Model Architecture
 
