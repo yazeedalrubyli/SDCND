@@ -26,7 +26,7 @@ In simulator, there are 3 cameras atached to the car. These are the images taken
 > To get this amount of data, It takes about 30min of driving around the track.
 
 ### Augmentation
-To get more data and to get rid of the bias in turning left because almost all the turns during the driving session are turning to the left, we flipped the images verticaly then multiply the each sterring wheel angle for flipped images by `-1`
+To get more data and get rid of the bias in turning left because almost all the turns during the driving session are turning to the left, we flipped the images verticaly then multiply the each sterring wheel angle for flipped images by `-1`
 
 ```python
 
@@ -37,7 +37,7 @@ R = measurments - 0.2
 measurments = np.concatenate((C, L, R, -C, -L, -R), axis=0)
 
 ```
-> After this operation we got ~150k of images to train our network with
+> This operation produce ~150k of images.
 
 ### 
 
