@@ -53,7 +53,7 @@ Each image taken has its own steering wheel angle which will act as a result of 
 [NVIDIA End to End Learning for Self-Driving Cars Paper](https://arxiv.org/abs/1604.07316)
 
 <p align="center">
-  <img src="Media/cnn-architecture.png" alt="Model Architecture" width="200" height="200"/>
+  <img src="Media/cnn-architecture.png" alt="Model Architecture" width="600" height="1000"/>
 </p>
 
 ## Results
