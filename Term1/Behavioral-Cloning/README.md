@@ -28,29 +28,45 @@ To get more data and get rid of the bias in turning left because almost all the 
 ```python
 
 measurments = read_csv('data/driving_log.csv', usecols=[3]).values
-C = measurments
-L = measurments + 0.2
-R = measurments - 0.2
-measurments = np.concatenate((C, L, R, -C, -L, -R), axis=0)
+Center = measurments
+Left = measurments 
+Right = measurments
+measurments = np.concatenate((Center, Left, Right, -Center, -Left, -Right), axis=0)
 
 ```
+[pic] [pic]
+
 > This operation produce ~150k of images.
+
+### Stay Between Lane Lines
+
+```python
+
+measurments = read_csv('data/driving_log.csv', usecols=[3]).values
+Center = measurments
+Left =  measurments + 0.2
+Right = measurments - 0.2
+measurments = np.concatenate((Center, Left, Right, -Center, -Left, -Right), axis=0)
+
+```
 
 ### How Camera and Steering Wheel Work
 Each image taken has its own steering wheel angle which will act as a result of the neural network. This image demonstrates the process.
 
 <p align="center">
   <img src="Media/training.png" alt="Training"/>
+  <br/>
+  NVIDIA End to End Learning for Self-Driving Cars (<a target="_blank" href="https://arxiv.org/abs/1604.07316">Paper</a>)
 </p>
 
 ### 
 
 ## Model Architecture
-
+NVIDIA CNN Architecture
 <p align="center">
   <img src="Media/cnn-architecture.png" alt="Model Architecture" width="550" height="800"/>
   <br/>
-  NVIDIA End to End Learning for Self-Driving Cars (<a target="_blank" href="https://arxiv.org/abs/1604.07316">Paper</a>)
+  End to End Learning for Self-Driving Cars (<a target="_blank" href="https://arxiv.org/abs/1604.07316">Paper</a>)
 </p>
 
 ## Results
