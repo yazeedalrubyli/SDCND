@@ -34,9 +34,10 @@ measurments = read_csv('data/driving_log.csv', usecols=[3]).values
 C = measurments
 L = measurments + 0.2
 R = measurments - 0.2
-#measurments = np.concatenate((C, L, R, -C, -L, -R), axis=0)
+measurments = np.concatenate((C, L, R, -C, -L, -R), axis=0)
 
 ```
+> After this operation we got ~150k of images to train our network with
 
 ### 
 
