@@ -13,11 +13,17 @@
 ## Training Strategy
 
 ### Dataset
-|  Type  | Size | Dimension | Color |
-|--------|------|-----------|-------|
-| Left   | ~16K |  160x320  |  RGB  |
-| Center | ~16K |  160x320  |  RGB  |
-| Right  | ~16K |  160x320  |  RGB  |
+In simulator, there are 3 cameras atached to the car. These are the images taken by each camera:
+| Postion | Size | Dimension | Color |
+|---------|------|-----------|-------|
+|  Left   | ~16K |  160x320  |  RGB  |
+|  Center | ~16K |  160x320  |  RGB  |
+|  Right  | ~16K |  160x320  |  RGB  |
+**
+|  Total  | ~50k |  160x320  |  RGB  |
+**
+
+* To get this amount of data, I drove around 
 
 ### Augmentation
 
