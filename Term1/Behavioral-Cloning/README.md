@@ -82,3 +82,6 @@ Each image taken has its own steering wheel angle which will act as a result of 
 </p>
 
 ## Future Improvements
+
+* Train on Second Track to generalize better
+* Try [comma.ai](http://comma.ai) Architecture
