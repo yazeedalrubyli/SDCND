@@ -1,6 +1,6 @@
 # Behaviorial Cloning [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-In this project, I Built and trained a convolutional neural network for end-to-end driving in a simulator, using TensorFlow and Keras. Used optimization techniques such as regularization and dropout to generalize the network for driving on multiple tracks.
+In this project, I Built and trained a convolutional neural network for end-to-end driving in a simulator, using TensorFlow and Keras. I used optimization techniques such as regularization and dropout to generalize the network for driving on multiple tracks.
 
 
 ## Project Structure
