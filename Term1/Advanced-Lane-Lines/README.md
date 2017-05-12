@@ -9,12 +9,21 @@ In this project, our goal is to write a software pipeline to identify the lane b
 
 ### Distortion Correction
 
-### Perspective Transform
+<p align="center">
+  <img src="Media/src_dst.png"/>
+</p>
 
+### Perspective Transform
+<p align="center">
+  <img src="Media/pre_warp.png"/>
+</p>
 ### Thresholding
 
-### Lane Line Curvature
 
+### Lane Line Curvature
+<p align="center">
+  <img src="Media/thresh_result.png"/>
+</p>
 ## Result
 
 <p align="center">
