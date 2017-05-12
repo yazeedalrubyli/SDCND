@@ -7,15 +7,21 @@ In this project, our goal is to write a software pipeline to identify the lane b
 
 ### Camera Calibration
 
+### Distortion Correction
+
 ### Perspective Transform
 
 ### Thresholding
 
-### Lanes and Curvature
+### Lane Line Curvature
 
 ## Result
 
-https://youtu.be/WPRGi-QqG3A
+<p align="center">
+  <img src="Media/BehavioralCloning.gif" alt="Advance Lane Line Finding"/>
+  <br/><br/>
+  Advance Lane Line Finding(<a target="_blank" href="https://youtu.be/WPRGi-QqG3A">Full Video</a>)
+</p>
 
 ## Challanges
 
