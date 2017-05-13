@@ -19,13 +19,13 @@ src = np.float32(
         [[730,450], # right top
          [1050,650], # right bottom
          [330,650], # left bottom
-         [600,450]]) #left top
+         [600,450]]) # left top
     
 dst = np.float32(
-        [[1200,0], #right top
+        [[1200,0], # right top
          [1200,700], # right bottom
          [200,700], # left bottom
-         [200,0]]) 
+         [200,0]]) # left top 
 
 M = cv2.getPerspectiveTransform(src,dst)
 warped = cv2.warpPerspective(img, M, img_size, flags= cv2.INTER_LINEAR)
