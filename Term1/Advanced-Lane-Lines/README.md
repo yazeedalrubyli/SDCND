@@ -5,7 +5,7 @@ In this project, our goal is to write a software pipeline to identify the lane b
 ## Pipeline
 
 ### Camera Calibration
-````python
+```python
 # Camera Calibration
 objp = np.zeros((6*9,3), np.float32)
 objp[:,:2] = np.mgrid[0:9, 0:6].T.reshape(-1,2)
