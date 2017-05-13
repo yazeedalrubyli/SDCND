@@ -133,9 +133,9 @@ center_lane = np.mean(left_fitx+right_fitx)/2
 center = (car_center - center_lane)*xm_per_pix
 ```
 <p align="center">
-  <img src="Media/result.gif" alt="Advance Lane Line Finding"/>
+  <img src="Media/result.gif" alt="Advanced Lane Finding"/>
   <br/><br/>
-  Advance Lane Line Finding (<a target="_blank" href="https://youtu.be/WPRGi-QqG3A">Full Video</a>)
+  Advanced Lane Finding (<a target="_blank" href="https://youtu.be/WPRGi-QqG3A">Full Video</a>)
 </p>
 
 ## Discussion
