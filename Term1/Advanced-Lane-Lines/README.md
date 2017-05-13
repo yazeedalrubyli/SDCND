@@ -34,7 +34,7 @@ warped = cv2.warpPerspective(img, M, img_size, flags= cv2.INTER_LINEAR)
   <img src="Media/pre_warp.png"/>
 </p>
 
-### Thresholding
+### Image Thresholding
 
 ```python
 l_channel = cv2.cvtColor(img, cv2.COLOR_RGB2LUV)[:,:,0]
@@ -70,8 +70,28 @@ combined_binary[(sxbinary == 1) | (l_binary == 1) | (b_binary == 1)] = 1
   <img src="Media/thresh.png" width="550"/>
 </p>
 
-### Lane Line Curvature
-#### fgfg
+### Lane Line Finding
+
+#### Polynomial Fitting
+
+```python
+# Concatenate the arrays of indices
+left_lane_inds = np.concatenate(left_lane_inds)
+right_lane_inds = np.concatenate(right_lane_inds)
+        
+# Extract left and right line pixel positions
+leftx = nonzerox[left_lane_inds]
+lefty = nonzeroy[left_lane_inds] 
+rightx = nonzerox[right_lane_inds]
+righty = nonzeroy[right_lane_inds] 
+
+# Fit a second order polynomial to each
+left_fit = np.polyfit(lefty, leftx, 2)
+right_fit = np.polyfit(righty, rightx, 2)
+```
+
+#### Curvature Measuring
+
 ```python
 left_curverad = ((1 + (2*left_fit_cr[0]*y_eval*ym_per_pix + left_fit_cr[1])**2)**1.5) / np.absolute(2*left_fit_cr[0])
 right_curverad = ((1 + (2*right_fit_cr[0]*y_eval*ym_per_pix + right_fit_cr[1])**2)**1.5) / np.absolute(2*right_fit_cr[0])
@@ -88,8 +108,6 @@ center_lane = np.mean(left_fitx+right_fitx)/2
     
 # Compute the diffrenece between car center and lane lines center
 center = (car_center - center_lane)*xm_per_pix
-
-
 ```
 
 <p align="center">
