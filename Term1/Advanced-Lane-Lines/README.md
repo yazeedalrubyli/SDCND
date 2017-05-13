@@ -66,6 +66,9 @@ sxbinary[(scaled_sobel >= thresh_min) & (scaled_sobel <= thresh_max)] = 1
 combined_binary = np.zeros_like(s_binary)
 combined_binary[(sxbinary == 1) | (l_binary == 1) | (b_binary == 1)] = 1
 ```
+<p align="center">
+  <img src="Media/thresh.png"/>
+</p>
 
 ### Lane Line Curvature
 
@@ -75,7 +78,7 @@ combined_binary[(sxbinary == 1) | (l_binary == 1) | (b_binary == 1)] = 1
 ```
 
 <p align="center">
-  <img src="Media/thresh_result.png"/>
+  <img src="Media/result.png"/>
 </p>
 
 ## Result
