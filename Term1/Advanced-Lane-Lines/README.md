@@ -77,6 +77,19 @@ left_curverad = ((1 + (2*left_fit_cr[0]*y_eval*ym_per_pix + left_fit_cr[1])**2)*
 right_curverad = ((1 + (2*right_fit_cr[0]*y_eval*ym_per_pix + right_fit_cr[1])**2)**1.5) / np.absolute(2*right_fit_cr[0])
 
 curvature = (left_curverad + right_curverad)/2
+
+xm_per_pix = 3.7/700 # meters per pixel in x dimension
+
+# Assuming center of camera is the car's center
+car_center = img.shape[1]/2
+   
+# Center between lane lines
+center_lane = np.mean(left_fitx+right_fitx)/2
+    
+#Compute the diffrenece between car center and lane lines center
+center = (car_center - center_lane)*xm_per_pix
+
+
 ```
 
 <p align="center">
