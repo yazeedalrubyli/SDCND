@@ -4,7 +4,7 @@ In this project, our goal is to write a software pipeline to identify the lane b
 
 ## Pipeline
 
-### Camera Calibration
+### Camera Calibration & Distortion Correction
 ```python
 # Camera Calibration
 objp = np.zeros((6*9,3), np.float32)
@@ -30,8 +30,6 @@ for path in images:
 <p align="center">
   <img src="Media/calibration.png"/>
 </p>
-
-### Distortion Correction
 
 <p align="center">
   <img src="Media/src_dst.png"/>
