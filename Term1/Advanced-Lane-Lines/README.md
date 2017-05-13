@@ -72,7 +72,7 @@ combined_binary[(sxbinary == 1) | (l_binary == 1) | (b_binary == 1)] = 1
 
 ### Lane Line Finding
 
-#### Polynomial Fitting
+#### Fitting Polynomial
 
 ```python
 # Concatenate the arrays of indices
@@ -90,7 +90,7 @@ left_fit = np.polyfit(lefty, leftx, 2)
 right_fit = np.polyfit(righty, rightx, 2)
 ```
 
-#### Curvature Measuring
+#### Measuring Curvature
 
 ```python
 left_curverad = ((1 + (2*left_fit_cr[0]*y_eval*ym_per_pix + left_fit_cr[1])**2)**1.5) / np.absolute(2*left_fit_cr[0])
