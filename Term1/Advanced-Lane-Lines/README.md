@@ -142,7 +142,7 @@ center = (car_center - center_lane)*xm_per_pix
 ## Result
 
 <p align="center">
-  <img src="Media/BehavioralCloning.gif" alt="Advance Lane Line Finding"/>
+  <img src="Media/result.gif" alt="Advance Lane Line Finding"/>
   <br/><br/>
   Advance Lane Line Finding (<a target="_blank" href="https://youtu.be/WPRGi-QqG3A">Full Video</a>)
 </p>
