@@ -132,13 +132,6 @@ center_lane = np.mean(left_fitx+right_fitx)/2
 # Compute the diffrenece between car center and lane lines center
 center = (car_center - center_lane)*xm_per_pix
 ```
-
-<p align="center">
-  <img src="Media/result.png" width="550"/>
-</p>
-
-## Result
-
 <p align="center">
   <img src="Media/result.gif" alt="Advance Lane Line Finding"/>
   <br/><br/>
