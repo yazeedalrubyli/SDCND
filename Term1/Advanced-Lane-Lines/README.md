@@ -67,7 +67,7 @@ combined_binary = np.zeros_like(s_binary)
 combined_binary[(sxbinary == 1) | (l_binary == 1) | (b_binary == 1)] = 1
 ```
 <p align="center">
-  <img src="Media/thresh.png"/>
+  <img src="Media/thresh.png" width="550"/>
 </p>
 
 ### Lane Line Curvature
@@ -80,7 +80,7 @@ curvature = (left_curverad + right_curverad)/2
 ```
 
 <p align="center">
-  <img src="Media/result.png"/>
+  <img src="Media/result.png" width="550"/>
 </p>
 
 ## Result
