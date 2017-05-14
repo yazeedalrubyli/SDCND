@@ -97,8 +97,7 @@ combined_binary[(sxbinary == 1) | (l_binary == 1) | (b_binary == 1)] = 1
 ### Lane Line Finding
 
 #### Fitting Polynomial
-Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
-
+We used Sliding Window technique to find the lane lines. Using the histogram of a binary image, we added 0s and 1s the more ones we have the more likely we have a line there. Starting from the bottom of the peak in the histogram, we use a sliding window placed around the line centers to find and follow the lines up to the top of the frame.
 ```python
 # Concatenate the arrays of indices
 left_lane_inds = np.concatenate(left_lane_inds)
@@ -116,8 +115,7 @@ right_fit = np.polyfit(righty, rightx, 2)
 ```
 
 #### Measuring Curvature
-Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
-
+Using previously found polynomial and radius of curvature [formula](http://www.intmath.com/applications-differentiation/8-radius-curvature.php) we can accurately compute the lane curvature. Assuming the center of the car is the center of the camera then the center of the image is the center of the car and `(Left_x + Right_x)/2` gives you the center between the left and right lines. given these facts, we take the difference between car center and lanes center to know how much is the car drifting from the center.
 ```python
 left_curverad = ((1 + (2*left_fit_cr[0]*y_eval*ym_per_pix + left_fit_cr[1])**2)**1.5) / np.absolute(2*left_fit_cr[0])
 right_curverad = ((1 + (2*right_fit_cr[0]*y_eval*ym_per_pix + right_fit_cr[1])**2)**1.5) / np.absolute(2*right_fit_cr[0])
