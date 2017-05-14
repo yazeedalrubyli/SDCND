@@ -1,6 +1,6 @@
 # Advanced Lane Finding [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-In this project, our goal is to write a software pipeline to identify the lane boundaries in a video.
+Our goal in this project is to write a software pipeline to identify the lane boundaries in a video.
 
 ## Pipeline
 
@@ -139,7 +139,7 @@ center = (car_center - center_lane)*xm_per_pix
 </p>
 
 ## Discussion
-
+In image thresholding, we encouraged to use S channel in HLS color. Instead, I used another channels like L in LUV and b in Lab in addition to the gradient. Using these channels improve lane finding, unlike using S channel from HLS which create noisy images.
 
 ## Future Improvments
 1. Improve image thresholding to generalize on challenging tracks.
