@@ -5,6 +5,8 @@ Our goal in this project is to write a software pipeline to identify the lane bo
 ## Pipeline
 
 ### Camera Calibration & Distortion Correction
+Briefly state how you computed the camera matrix and distortion coefficients.
+
 ```python
 # Camera Calibration
 objp = np.zeros((6*9,3), np.float32)
@@ -36,6 +38,7 @@ for path in images:
 </p>
 
 ### Perspective Transform
+Describe how (and identify where in your code) you performed a perspective transform
 
 ```python
 src = np.float32(
@@ -57,7 +60,8 @@ warped = cv2.warpPerspective(img, M, img_size, flags= cv2.INTER_LINEAR)
   <img src="Media/pre_warp.png"/>
 </p>
 
-### Image Thresholding
+### Color Transforming
+Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image. 
 
 ```python
 l_channel = cv2.cvtColor(img, cv2.COLOR_RGB2LUV)[:,:,0]
@@ -96,6 +100,7 @@ combined_binary[(sxbinary == 1) | (l_binary == 1) | (b_binary == 1)] = 1
 ### Lane Line Finding
 
 #### Fitting Polynomial
+Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 ```python
 # Concatenate the arrays of indices
@@ -114,6 +119,7 @@ right_fit = np.polyfit(righty, rightx, 2)
 ```
 
 #### Measuring Curvature
+Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 ```python
 left_curverad = ((1 + (2*left_fit_cr[0]*y_eval*ym_per_pix + left_fit_cr[1])**2)**1.5) / np.absolute(2*left_fit_cr[0])
