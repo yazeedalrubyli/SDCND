@@ -60,7 +60,7 @@ warped = cv2.warpPerspective(img, M, img_size, flags= cv2.INTER_LINEAR)
   <img src="Media/pre_warp.png"/>
 </p>
 
-### Color Transforming
+### Color Transformation
 Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image. 
 
 ```python
@@ -145,9 +145,9 @@ center = (car_center - center_lane)*xm_per_pix
 </p>
 
 ## Discussion
-In image thresholding, we encouraged to use S channel in HLS. Instead, I used another channels like L in LUV and b in Lab in addition to the gradient. Using these channels improve lane finding, unlike using S channel from HLS which create noisy images.
+In color transformation, we encouraged to use S channel in HLS. Instead, I used another channels like L in LUV and b in Lab in addition to the gradient. Using these channels improve lane finding, unlike using S channel from HLS which create noisy images.
 
 ## Future Improvments
-* Improve color transforming to generalize on challenging tracks.
+* Improve color transformation to generalize on challenging tracks.
 * Improve Sliding Window to search on specific areas.
 * Use Machine Learning for identifying lane lines.
