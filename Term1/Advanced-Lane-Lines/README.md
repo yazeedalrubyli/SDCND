@@ -5,7 +5,7 @@ Our goal in this project is to write a software pipeline to identify the lane bo
 ## Pipeline
 
 ### Camera Calibration & Distortion Correction
-We used OpenCV functions findChessboardCorners() to automatically find and draw corners in an image of a chessboard pattern. Then, we calibrate the camera given object points, image points, and the shape of the grayscale image. Finally, we used cv2.undistort to undistort a distorted image.
+We used OpenCV function findChessboardCorners() to automatically find corners in an image of a chessboard pattern. Then, we calibrate the camera given object points, image points, and the shape of the grayscale image. Finally, we used cv2.undistort to undistort a distorted image.
 ```python
 # Camera Calibration
 objp = np.zeros((6*9,3), np.float32)
@@ -37,8 +37,7 @@ for path in images:
 </p>
 
 ### Perspective Transform
-Describe how (and identify where in your code) you performed a perspective transform
-
+We used OpenCV functions getPerspectiveTransform() and warpPerspective() to map the points in a given image to different, desired, image points with a new perspective. The view we want to achieve from using perspective transform is the bird’s-eye view transform that let us view a lane from above.
 ```python
 src = np.float32(
         [[730,450], # right top
@@ -60,8 +59,7 @@ warped = cv2.warpPerspective(img, M, img_size, flags= cv2.INTER_LINEAR)
 </p>
 
 ### Color Transformation
-Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image. 
-
+We used LUV and Lab color spaces specifically we picked L from LUV and b from Lab which we combined with gradient thresholding gives better detection of lane lines. We did not use S channel from HLS which produce noisy images, although it is there in the code.
 ```python
 l_channel = cv2.cvtColor(img, cv2.COLOR_RGB2LUV)[:,:,0]
 b_channel = cv2.cvtColor(img, cv2.COLOR_RGB2Lab)[:,:,2]
