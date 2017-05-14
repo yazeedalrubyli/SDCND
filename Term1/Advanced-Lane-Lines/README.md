@@ -1,6 +1,6 @@
 # Advanced Lane Finding [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-Our goal in this project is to write a software pipeline to identify the lane boundaries.
+Our goal in this project is to Build an advanced lane-finding algorithm using distortion correction, image rectification, color transforms, and gradient thresholding. Identified lane curvature, vehicle displacement and the lane boundaries. Overcame environmental challenges such as shadows and pavement changes.
 
 ## Pipeline
 
