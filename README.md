@@ -3,7 +3,7 @@
 ## With David Silver and SDCND Students in GTC 2017
 
 <p align="center">
-<img src="Media/acc_vs_net_vs_ops.jpg" alt="CNN Architectures" width="600"/>
+<img src="Media/SDCND.jpg" alt="CNN Architectures" width="600"/>
 </p>
 
 ## Deep Learnign Architectures
