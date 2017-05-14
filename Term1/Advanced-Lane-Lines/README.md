@@ -141,8 +141,7 @@ center = (car_center - center_lane)*xm_per_pix
 ## Discussion
 
 
-## Challanges
-
 ## Future Improvments
-
-
+1. Improve image thresholding to generalize on challenging tracks.
+2. Improve Sliding Window to search on specific areas.
+3. Use Machine Learning in identifying Lane Lines.
