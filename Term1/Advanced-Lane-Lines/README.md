@@ -5,8 +5,8 @@ Our goal in this project is to write a software pipeline to identify the lane bo
 ## Pipeline
 
 ### Camera Calibration & Distortion Correction
-Briefly state how you computed the camera matrix and distortion coefficients.
-
+Briefly, state how you computed the camera matrix and distortion coefficients.
+We used OpenCV functions findChessboardCorners() to automatically find and draw corners in an image of a chessboard pattern. Then, we calibrate the camera given object points, image points, and the shape of the grayscale image. Finally, we used cv2.undistort to undistort a distorted image.
 ```python
 # Camera Calibration
 objp = np.zeros((6*9,3), np.float32)
