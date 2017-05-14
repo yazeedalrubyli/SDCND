@@ -139,7 +139,7 @@ center = (car_center - center_lane)*xm_per_pix
 </p>
 
 ## Discussion
-In image thresholding, we encouraged to use S channel in HLS color. Instead, I used another channels like L in LUV and b in Lab in addition to the gradient. Using these channels improve lane finding, unlike using S channel from HLS which create noisy images.
+In image thresholding, we encouraged to use S channel in HLS. Instead, I used another channels like L in LUV and b in Lab in addition to the gradient. Using these channels improve lane finding, unlike using S channel from HLS which create noisy images.
 
 ## Future Improvments
 1. Improve image thresholding to generalize on challenging tracks.
