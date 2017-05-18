@@ -40,7 +40,7 @@ When we augment all the images at once, the accuracy did not improve that much. 
 I started first with LeNet and I tried to play around with the hyperparameters and I got around 89% as validation accuracy. Then, after reading some papers about available CNN I tried to implement [SqueezeNet](https://arxiv.org/pdf/1602.07360.pdf) which they claim to be as accurate as AlexNet but 50X faster. I got validation accuracy about 90%, so I decided to build my own CNN. I build my CNN with 3 Convolutional layers and 3 Fully Connected layers, I got validation accuracy about **99% without even preprocess or augmenting my dataset**, I called my network, **YazNet** ;)
 
 <p align="center">
-  <img src="YazNet_Arch.png" alt="Architecture"/>
+  <img src="Media/YazNet_Arch.png" alt="Architecture"/>
 </p>
 
 ```
@@ -93,7 +93,7 @@ I tried to inject layers and remove some and mix them till I got **YazNet** whic
 
 
 <p align="center">
-  <img src="Model_Training_Stat.png" alt="Training Statistics"/>
+  <img src="Media/Model_Training_Stat.png" alt="Training Statistics"/>
 </p>
 
 
