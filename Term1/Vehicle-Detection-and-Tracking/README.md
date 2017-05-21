@@ -10,8 +10,7 @@ We used [HOG](http://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf) whic
 ```python
 from skimage.feature import hog
 
-features = hog(img, orientations=9, pixels_per_cell=(8, 8),
-                       cells_per_block=(2, 2))
+features = hog(img, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2))
 ```
 <p align="center">
   <img src="Media/calibration.png"/>
