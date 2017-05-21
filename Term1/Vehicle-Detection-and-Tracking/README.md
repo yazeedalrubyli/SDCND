@@ -5,8 +5,7 @@ Our goal in this project is to write a software pipeline to identify vehicles in
 ## Pipeline
 
 ### Histogram of Oriented Gradients (HOG)
-We used [HOG](http://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf) which is an effective approch for object detection. We extracted hog features using Scikit library. We converted RGB color space to YCrCb which gives the best accurecy on test images. After expermenting with HOG paramters, we have chosen `orientations= 9 , pixels_per_cell= (8, 8),  cells_per_block= (2, 2)` as it tend to be very effective on `64x64`images and increasing values like orientations will increase the features vector and did not improve the model accurecy.
-
+We used HOG which is an effective approach for object detection. We extracted hog features using Scikit library. We converted `RGB` color space to `YCrCb` which gives the best accuracy on test images. After experimenting with HOG parameters, we have chosen `orientations= 9, pixels_per_cell= (8, 8), cells_per_block= (2, 2)` as it tend to be very effective on `64x64` images and increasing values like orientations will increase the features vector and did not improve the model accuracy.
 ```python
 from skimage.feature import hog
 
