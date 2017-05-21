@@ -17,7 +17,17 @@ We used [HOG](http://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf) whic
 ```python
 from skimage.feature import hog
 
-features = hog(img, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2))
+image = cv2.cvtColor(image, cv2.COLOR_RGB2YCrCb)
+
+ch1 = feature_image[:,:,0]
+ch2 = feature_image[:,:,1]
+ch3 = feature_image[:,:,2]
+
+hog1 = hog(ch1, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2))
+hog2 = hog(ch2, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2))
+hog3 = hog(ch3, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2))
+
+hog_features = np.hstack((hog1, hog2, hog3))
 ```
 <p align="center">
   <img src="Media/car-and-hog.jpg" width="500"/>
