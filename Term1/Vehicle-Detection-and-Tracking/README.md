@@ -3,7 +3,7 @@
 Our goal in this project is to write a software pipeline to identify vehicles in a video from a front-facing camera on a car. 
 
 ## Dataset
-Datasets are comprised of images taken from the [GTI](http://www.gti.ssr.upm.es/data/Vehicle_database.html) vehicle image database
+Datasets are comprised of images taken from the [GTI](http://www.gti.ssr.upm.es/data/Vehicle_database.html) vehicle image database.
 
 |    Type      | Amount |  Size | Color |
 |--------------|--------|-------|-------|
@@ -71,4 +71,4 @@ hog_features = np.hstack((hog1, hog2, hog3))
 
 
 ## Future Improvments
-* 
+* Using [Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325) (state-of-the-art for object detection)
