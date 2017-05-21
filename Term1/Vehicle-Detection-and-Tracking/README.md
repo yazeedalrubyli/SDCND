@@ -2,6 +2,13 @@
 
 Our goal in this project is to write a software pipeline to identify vehicles in a video from a front-facing camera on a car. 
 
+## Dataset
+
+|    Type      | Amount |  Size | Color |
+|--------------|--------|-------|-------|
+| Vehicles     | ~8,790 | 64x64 |  RGB  |
+| Non-Vehicles | ~8,970 | 64x64 |  RGB  |
+
 ## Pipeline
 
 ### Histogram of Oriented Gradients (HOG)
