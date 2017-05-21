@@ -13,6 +13,8 @@ features = hog(img, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 
 ```
 <p align="center">
   <img src="Media/car-and-hog.jpg"/>
+  <br/>
+  <a>http://www.udacity.com/drive</a>
 </p>
 
 ### Sliding Window Search
