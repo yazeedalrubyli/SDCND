@@ -35,6 +35,8 @@ hog_features = np.hstack((hog1, hog2, hog3))
   <a href="http://www.udacity.com/drive">SDCND</a>
 </p>
 
+### The Classifier
+
 ### Sliding Window Search
 
 ```python
