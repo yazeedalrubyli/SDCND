@@ -1,10 +1,15 @@
 # Vehicle Detection and Tracking [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
+<<<<<<< HEAD
 Our goal in this project is to Build 
+=======
+Our goal in this project is to build 
+>>>>>>> d591de25102145d6830320f8758c7e1b5ef6ce95
 
 ## Pipeline
 
 ### Camera Calibration & Distortion Correction
+<<<<<<< HEAD
 ```python
 # Camera Calibration
 objp = np.zeros((6*9,3), np.float32)
@@ -26,6 +31,11 @@ for path in images:
     if ret == True:
         objpoints.append(objp)
         imgpoints.append(corners)
+=======
+
+```python
+
+>>>>>>> d591de25102145d6830320f8758c7e1b5ef6ce95
 ```
 <p align="center">
   <img src="Media/calibration.png"/>
@@ -36,6 +46,7 @@ for path in images:
 </p>
 
 ### Perspective Transform
+<<<<<<< HEAD
 We used OpenCV functions getPerspectiveTransform() and warpPerspective() to map the points in a given image to different, desired, image points with a new perspective. The view we want to achieve from using perspective transform is the bird’s-eye view transform that let us view a lane from above.
 ```python
 src = np.float32(
@@ -52,12 +63,18 @@ dst = np.float32(
 
 M = cv2.getPerspectiveTransform(src,dst)
 warped = cv2.warpPerspective(img, M, img_size, flags= cv2.INTER_LINEAR)
+=======
+
+```python
+
+>>>>>>> d591de25102145d6830320f8758c7e1b5ef6ce95
 ```
 <p align="center">
   <img src="Media/pre_warp.png"/>
 </p>
 
 ### Color Transformation
+<<<<<<< HEAD
 We used LUV and Lab color spaces specifically we picked L from LUV and b from Lab which we combined with gradient thresholding gives better detection of lane lines. We did not use S channel from HLS which produce noisy images, although it is there in the code.
 ```python
 l_channel = cv2.cvtColor(img, cv2.COLOR_RGB2LUV)[:,:,0]
@@ -88,11 +105,17 @@ sxbinary[(scaled_sobel >= thresh_min) & (scaled_sobel <= thresh_max)] = 1
 
 combined_binary = np.zeros_like(s_binary)
 combined_binary[(sxbinary == 1) | (l_binary == 1) | (b_binary == 1)] = 1
+=======
+
+```python
+
+>>>>>>> d591de25102145d6830320f8758c7e1b5ef6ce95
 ```
 <p align="center">
   <img src="Media/thresh.png" width="550"/>
 </p>
 
+<<<<<<< HEAD
 ### Lane Line Finding
 
 #### Fitting Polynomial
@@ -145,3 +168,18 @@ In color transformation, we encouraged to use S channel in HLS. Instead, I used 
 * Improve color transformation to generalize on challenging tracks.
 * Improve Sliding Window to search on specific areas.
 * Use Machine Learning for identifying lane lines.
+=======
+## Result
+
+<p align="center">
+  <img src="Media/result.gif" alt="Vehicle Detection and Tracking"/>
+  <br/><br/>
+  Advanced Lane Finding (<a target="_blank" href="https://youtu.be/TAdXKc_fqCE">Full Video</a>)
+</p>
+
+## Discussion
+
+
+## Future Improvments
+* 
+>>>>>>> d591de25102145d6830320f8758c7e1b5ef6ce95
