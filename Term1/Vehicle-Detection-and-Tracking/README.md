@@ -22,6 +22,15 @@ Our goal in this project is to build
   <img src="Media/pre_warp.png"/>
 </p>
 
+### False Positives and Overlapping
+
+```python
+
+```
+<p align="center">
+  <img src="Media/pre_warp.png"/>
+</p>
+
 ## Result
 
 <p align="center">
