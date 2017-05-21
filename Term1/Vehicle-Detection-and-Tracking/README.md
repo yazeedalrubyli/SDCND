@@ -4,7 +4,7 @@ Our goal in this project is to build
 
 ## Pipeline
 
-### Camera Calibration & Distortion Correction
+### Histogram of Oriented Gradients (HOG)
 
 ```python
 
@@ -17,22 +17,13 @@ Our goal in this project is to build
   <img src="Media/src_dst.png"/>
 </p>
 
-### Perspective Transform
+### Sliding Window Search
 
 ```python
 
 ```
 <p align="center">
   <img src="Media/pre_warp.png"/>
-</p>
-
-### Color Transformation
-
-```python
-
-```
-<p align="center">
-  <img src="Media/thresh.png" width="550"/>
 </p>
 
 ## Result
