@@ -40,7 +40,7 @@ Our goal in this project is to build
 <p align="center">
   <img src="Media/result.gif" alt="Vehicle Detection and Tracking"/>
   <br/><br/>
-  Advanced Lane Finding (<a target="_blank" href="https://youtu.be/TAdXKc_fqCE">Full Video</a>)
+  Vehicle Detection and Tracking (<a target="_blank" href="https://youtu.be/TAdXKc_fqCE">Full Video</a>)
 </p>
 
 ## Discussion
