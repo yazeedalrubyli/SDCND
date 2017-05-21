@@ -4,7 +4,7 @@ Our goal in this project is to write a software pipeline to identify vehicles in
 
 ## Dataset
 Datasets are comprised of images taken from the [GTI](http://www.gti.ssr.upm.es/data/Vehicle_database.html) vehicle image database
-    Type      | Amount |  Size | Color |
+|    Type      | Amount |  Size | Color |
 |--------------|--------|-------|-------|
 | Vehicles     | ~8,790 | 64x64 |  RGB  |
 | Non-Vehicles | ~8,970 | 64x64 |  RGB  |
