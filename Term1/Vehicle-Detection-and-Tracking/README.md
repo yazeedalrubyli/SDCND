@@ -13,10 +13,6 @@ Our goal in this project is to build
   <img src="Media/calibration.png"/>
 </p>
 
-<p align="center">
-  <img src="Media/src_dst.png"/>
-</p>
-
 ### Sliding Window Search
 
 ```python
