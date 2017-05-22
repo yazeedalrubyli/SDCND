@@ -36,9 +36,34 @@ hog_features = np.hstack((hog1, hog2, hog3))
 </p>
 
 ### The Classifier
-
+SVM used as a classifier to detect vehicles from non-vehicles, and the accuracy was 99.06% on test samples which represent 20% of the dataset. Matplotlib already imported `png` images as scaled from `0-1` so not need to divide images by 255. Features used to classify images was spatial color, color histogram and HOG features.
 ```python
+from sklearn.preprocessing import StandardScaler
+import glob
 
+# Read in our vehicles and non-vehicles
+non_vehicles = glob.glob('Dataset/non-vehicles/*/*.png')
+vehicles = glob.glob('Dataset/vehicles/*/*.png')
+
+X = []
+
+for path in np.append(vehicles, non_vehicles):
+    image = mpimg.imread(path)
+    X.append(extract_features(image))
+X = np.array(X).astype(np.float64)
+Y = np.hstack((np.ones(len(vehicles)), np.zeros(len(non_vehicles))))
+# Fit a per-column scaler
+X_scaler = StandardScaler().fit(X)
+# Apply the scaler to X
+scaled_X = X_scaler.transform(X)
+
+rand_state = np.random.randint(0, 100)
+X_train, X_test, y_train, y_test = train_test_split(
+    scaled_X, Y, test_size=0.2, random_state=rand_state)
+
+svc = LinearSVC()
+svc.fit(X_train, y_train)
+print('Test Accuracy of SVC = ', round(svc.score(X_test, y_test), 4))
 ```
 
 ### Sliding Window Search
