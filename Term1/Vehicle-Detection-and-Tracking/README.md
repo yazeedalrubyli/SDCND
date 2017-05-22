@@ -156,7 +156,7 @@ def draw_labeled_bboxes(img, labels):
 </p>
 
 ## Discussion
-
+When importing `png` images using Matplotlib, I scaled it by dividing images by 255 which result in bad object detection because classifier trained on [0-1]/255 and images wanted to be predicted was `jpg` which was [0-255]/255. So, this issue fixed by not scaling imported `png` images as it's already scaled.
 
 ## Future Improvments
 * Using [Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325) (state-of-the-art for object detection)
