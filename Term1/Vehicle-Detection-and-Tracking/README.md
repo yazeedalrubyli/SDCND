@@ -71,7 +71,34 @@ print('Test Accuracy of SVC = ', round(svc.score(X_test, y_test), 4))
 ### Sliding Window Search
 
 ```python
+img_tosearch = img[ystart:ystop,:,:]
 
+# Define blocks and steps as above
+nxblocks = (ch1.shape[1] // pix_per_cell) - cell_per_block + 1
+nyblocks = (ch1.shape[0] // pix_per_cell) - cell_per_block + 1 
+nfeat_per_block = orient*cell_per_block**2
+    
+# 64 was the orginal sampling rate, with 8 cells and 8 pix per cell
+window = 64
+nblocks_per_window = (window // pix_per_cell) - cell_per_block + 1
+cells_per_step = 2  # Instead of overlap, define how many cells to step
+nxsteps = (nxblocks - nblocks_per_window) // cells_per_step
+nysteps = (nyblocks - nblocks_per_window) // cells_per_step
+
+for xb in range(nxsteps):
+        for yb in range(nysteps):
+            ypos = yb*cells_per_step
+            xpos = xb*cells_per_step
+	    xleft = xpos*pix_per_cell
+            ytop = ypos*pix_per_cell
+	    
+            # Extract Features and Predict #
+ 	    
+            if prediction is True:
+                xbox_left = np.int(xleft*scale)
+                ytop_draw = np.int(ytop*scale)
+                win_draw = np.int(window*scale) 	
+  	        box_list.append(((xbox_left, ytop_draw+ystart),(xbox_left+win_draw,ytop_draw+win_draw+ystart)))  
 ```
 <p align="center">
   <img src="Media/window1.png"/>
