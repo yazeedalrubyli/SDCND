@@ -69,11 +69,11 @@ print('Test Accuracy of SVC = ', round(svc.score(X_test, y_test), 4))
 ```
 
 ### Sliding Window Search
-
+Sliding Window Search is used to divide the image into chunks of `64x64` images in order to be pushed into the classifier to classify these images as vehicles or non-vehicles, `8x8` is chosen as a block size with a step of 2 each time when lopping through specified region of the image which is the road and `1.5` scale which gives broader view. When experimenting with the scale to increase/decrease its value the region selected as a vehicle was either too small or too large or can't detect it. Furthermore, combined features between HOG and Color based features are used to optimize the performance of the classifier.
 ```python
 img_tosearch = img[ystart:ystop,:,:]
 
-# Define blocks and steps as above
+# Define blocks and steps
 nxblocks = (ch1.shape[1] // pix_per_cell) - cell_per_block + 1
 nyblocks = (ch1.shape[0] // pix_per_cell) - cell_per_block + 1 
 nfeat_per_block = orient*cell_per_block**2
