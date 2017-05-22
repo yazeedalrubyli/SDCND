@@ -98,7 +98,8 @@ for xb in range(nxsteps):
                 xbox_left = np.int(xleft*scale)
                 ytop_draw = np.int(ytop*scale)
                 win_draw = np.int(window*scale) 	
-  	        box_list.append(((xbox_left, ytop_draw+ystart),(xbox_left+win_draw,ytop_draw+win_draw+ystart)))  
+  	        box_list.append(((xbox_left, ytop_draw+ystart),
+			(xbox_left+win_draw,ytop_draw+win_draw+ystart)))  
 ```
 <p align="center">
   <img src="Media/window1.png"/>
