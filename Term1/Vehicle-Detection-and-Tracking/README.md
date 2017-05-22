@@ -159,4 +159,4 @@ When importing `png` images using Matplotlib, I scaled it by dividing images by 
 
 ## Future Improvments
 * Using [Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325) (state-of-the-art for object detection)
-* Vectorize Function to Speed Up the Object Detection (Detect in < 1sec)
+* Vectorize Function to Speed Up the Object Detection (Detect in < 1 sec)
