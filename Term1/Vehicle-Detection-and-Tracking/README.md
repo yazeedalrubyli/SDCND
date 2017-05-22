@@ -36,9 +36,11 @@ hog_features = np.hstack((hog1, hog2, hog3))
 </p>
 
 ### The Classifier
-SVM used as a classifier to detect vehicles from non-vehicles, and the accuracy was 99.06% on test samples which represent 20% of the dataset. Matplotlib already imported `png` images as scaled from `0-1` so not need to divide images by 255. Features used to classify images was spatial color, color histogram and HOG features.
+SVM used as a classifier to detect vehicles from non-vehicles, and the accuracy was 99.06% on test samples which represent 20% of the dataset. Matplotlib already imported `png` images as scaled from `0-1` so no need for dividing images by 255. Features used to classify images was spatial color, color histogram and HOG features.
 ```python
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.svm import LinearSVC
 import glob
 
 # Read in our vehicles and non-vehicles
@@ -72,16 +74,49 @@ print('Test Accuracy of SVC = ', round(svc.score(X_test, y_test), 4))
 
 ```
 <p align="center">
-  <img src="Media/pre_warp.png"/>
+  <img src="Media/window1.png"/>
 </p>
 
-### False Positives and Overlapping
+<p align="center">
+  <img src="Media/window2.png"/>
+</p>
 
+## False Positives and Overlapping
+Heatmap was used to overcome the false positives and overlapping issue. As boxes as overlapped in certain positions within the image, its heat will increase, mostly vehicle is detected.
 ```python
+from scipy.ndimage.measurements import label
 
+def add_heat(heatmap, bbox_list):
+    # Iterate through list of bboxes
+    for box in bbox_list:
+        # Add += 1 for all pixels inside each bbox
+        heatmap[box[0][1]:box[1][1], box[0][0]:box[1][0]] += 1
+    # Return updated heatmap
+    return heatmap
+
+def apply_threshold(heatmap, threshold):
+    # Zero out pixels below the threshold
+    heatmap[heatmap <= threshold] = 0
+    # Return thresholded map
+    return heatmap
+
+def draw_labeled_bboxes(img, labels):
+    # Iterate through all detected cars
+    for car_number in range(1, labels[1]+1):
+        # Find pixels with each car_number label value
+        nonzero = (labels[0] == car_number).nonzero()
+        # Identify x and y values of those pixels
+        nonzeroy = np.array(nonzero[0])
+        nonzerox = np.array(nonzero[1])
+        # Define a bounding box based on min/max x and y
+        bbox = ((np.min(nonzerox), np.min(nonzeroy)), (np.max(nonzerox), np.max(nonzeroy)))
+        # Draw the box on the image
+        cv2.rectangle(img, bbox[0], bbox[1], (0,0,255), 6)
+    # Return the image
+    return img
 ```
 <p align="center">
-  <img src="Media/pre_warp.png"/>
+  <img src="Media/false_positive.png"/>
 </p>
 
 ## Result
@@ -97,3 +132,4 @@ print('Test Accuracy of SVC = ', round(svc.score(X_test, y_test), 4))
 
 ## Future Improvments
 * Using [Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325) (state-of-the-art for object detection)
+* Vectorize Function to Speed Up the Object Detection (Detect in < 1sec)
