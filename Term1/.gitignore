@@ -1,0 +1,6 @@
+mac_sim.app
+
+Dataset/
+test_images/
+
+*.mp4
