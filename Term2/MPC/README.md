@@ -1,14 +1,14 @@
 # Model Predictive Controller (*MPC*)
 
 ## The Model
-*Kinematic Model includes:*
+**Kinematic Model includes:**
 1. the vehicle's x and y coordinates
 2. orientation angle (psi)
 3. velocity.
 4. cross-track error
 5. psi error (epsi). 
 
-*Actuator outputs are:*
+**Actuator outputs are:**
 1. acceleration.
 2. delta (steering angle). 
 
