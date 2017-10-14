@@ -8,7 +8,6 @@ using CppAD::AD;
 //=============================================================================
 const size_t N = 15;
 const double dt = 0.1;
-
 //=============================================================================
 // This value assumes the model presented in the classroom is used.
 // Length from front to CoG that has a similar radius.
