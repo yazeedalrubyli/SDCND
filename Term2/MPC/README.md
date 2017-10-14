@@ -1,4 +1,4 @@
-# Model Predictive Controller (**MPC**)
+# Model Predictive Controller (MPC)
 
 ## The Model
 **Kinematic Model includes:**
