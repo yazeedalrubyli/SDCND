@@ -25,6 +25,7 @@ epsi[t+1] = psi[t] - psides[t] + v[t] * delta[t] / Lf * dt
 x,y denote the position of the vehicle, psi the orientation angle/heading direction, v is the velocity cte the cross-track error and epsi the orientation error. Lf is the distance between the center of mass of the vehicle and the front wheels and affects the maneuverability.
 
 State ~> [x,y,psi,v]
+
 Control Input (Actuators) ~> [delta,a]
 
 ## Timestep Length and Elapsed Duration (N & dt)
