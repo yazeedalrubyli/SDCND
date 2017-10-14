@@ -24,9 +24,9 @@ epsi[t+1] = psi[t] - psides[t] + v[t] * delta[t] / Lf * dt
 ```
 x,y denote the position of the vehicle, psi the orientation angle/heading direction, v is the velocity cte the cross-track error and epsi the orientation error. Lf is the distance between the center of mass of the vehicle and the front wheels and affects the maneuverability.
 
-State ~> [x,y,psi,v]
+**State** ~> [x,y,psi,v]
 
-Control Input (Actuators) ~> [delta,a]
+**Control Input** (Actuators) ~> [delta,a]
 
 ## Timestep Length and Elapsed Duration (N & dt)
 `N = 10` and `dt = 0.1`. These values were chosen for which the car drive smoothly around the track for velocities range from 0 to around 55mph. The prediction horizon `T` is the duration over which future predictions are made which is equal to `N x dt`, Where `N` is the number of timesteps in the horizon and `dt` is how much time elapses between actuation, in our case `N = 10` and `dt = 0.1`, then T would be 1 second. Choosing dt to be smaller is better because it makes it easy to accurately approximate a continuous reference trajectory. In addition, choosing `N` to be large isn't always better because it will consider further trajectory's points in the model which may produce inconsistent behavior.
