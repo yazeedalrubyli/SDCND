@@ -4,7 +4,8 @@
 #include "Eigen-3.3/Eigen/Core"
 
 using CppAD::AD;
-
+// Thanks to Jeremy Shannon, Some ideas taken from his repo.
+// https://github.com/jeremy-shannon
 //=============================================================================
 const size_t N = 15;
 const double dt = 0.1;
