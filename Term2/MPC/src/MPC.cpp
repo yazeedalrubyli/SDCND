@@ -7,7 +7,7 @@ using CppAD::AD;
 // Thanks to Jeremy Shannon, Some ideas taken from his repo.
 // https://github.com/jeremy-shannon
 //=============================================================================
-const size_t N = 15;
+const size_t N = 10;
 const double dt = 0.1;
 //=============================================================================
 // This value assumes the model presented in the classroom is used.
@@ -50,9 +50,9 @@ public:
             fg[0] += CppAD::pow(vars[v_start + i] - ref_v, 2);
         }
         for (int i = 0; i < N - 1; i++) {
-            fg[0] += 200 * CppAD::pow(vars[delta_psi_start + i], 2);
-            fg[0] += 200 * CppAD::pow(vars[a_start + i], 2);
-            fg[0] += 700 * CppAD::pow(vars[delta_psi_start + i] * vars[v_start+i], 2);
+            fg[0] += 120 * CppAD::pow(vars[delta_psi_start + i], 2);
+            fg[0] += 120 * CppAD::pow(vars[a_start + i], 2);
+            fg[0] += 600 * CppAD::pow(vars[delta_psi_start + i] * vars[v_start+i], 2);
         }
         for (int i = 0; i < N - 2; i++) {
             fg[0] += 100 * CppAD::pow(vars[delta_psi_start + i + 1] - vars[delta_psi_start + i], 2);
