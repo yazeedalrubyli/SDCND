@@ -2,15 +2,15 @@
 
 ## The Model
 **Kinematic Model includes:**
-1. the vehicle's x and y coordinates
-2. orientation angle (psi)
-3. velocity.
-4. cross-track error
-5. psi error (epsi). 
+1. Vehicle's x and y coordinates.
+2. Orientation Angle (psi).
+3. Velocity.
+4. Cross-track Error.
+5. Psi Error (epsi). 
 
 **Actuator outputs are:**
-1. acceleration.
-2. delta (steering angle). 
+1. Acceleration.
+2. Delta (steering angle). 
 
 The model combines the state and actuations from the previous timestep to calculate the state for the current timestep based on these equations:
 
